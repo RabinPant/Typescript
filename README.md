@@ -79,7 +79,116 @@ sportsTwo.push(Futbol);
 for(let i of sportsTwo){
  console.log(i);
 }
+```
 
+### Classes and OOP:
+```
+class Customer{
+
+  firstName:string;
+  lastName:string;
+}
+
+let myCustomer = new Customer();
+myCustomer.firstName = "rabin";
+myCustomer.lastName = "Dixon";
+
+```
+### constructor:
+```
+class Customer{
+ firstName: string;
+ lastName: string;
+
+ constructor(theFirst:string,thelast:string){
+  this.firstName = theFrist;
+  this.lastName = theLast;
+ 
+ }
+
+}
+let myCustomer = new Customer("Mrtin", "dixon");
+console.log(myCustomer.firstName);
+console.log(myCustomer.lastName);
+
+```
+
+To prevent the compiler to generate the JS file when it shows error is:
+tsc --noEmitOnError cutomer.ts
+
+### Getter/Setter Method:
+```
+class Customer{
+
+   private firstName: string;
+   private lastName: string;
+
+   public getFirstName():string{
+    return this.firstName;  
+   }
+   public setFirstName(theFirst:string):void{
+    this.fistName = theFirst;
+   
+   }
+
+}
+```
+This is the way to do in the traditional approach <br>
+but there is another way to do it as well:
+
+#### Accessors -GET/SET
+
+```
+class customer{
+
+  private firstName:string;
+  private lastName:string;
+
+ public get firstName():string{
+  return this.firstName;
+ }
+
+ public set firstName(first:string ){
+  this.firstName = first;
+ }
+
+}
+```
+1) you can use get and set accessor in the method
+2) in the set method you dont need to write the return type of the method.
+
+To have this feature run in the local you've to do :<br>
+
+tsc --target ES5 --noEmitOnError customer.ts <br>
+
+because we have this feature on after ES5.<br>
+
+we can set all this in the tsconfig.js file. Instead of writing all in the terminal we can do so in the config file. <br>
+
+in config file add this after initaiting config file tsc --init <br>
+"target": "es5", 
+    "module":"commonjs",
+    "noEmitOnError": true,                              
+
+### parameter Properties:
+
+we saw the traditional way of constructor initializing the parameter: how can we reduce the boilerpate code:
+```
+class customer{
+
+ constructor(private _firstName:string, private _lastName:string){
+}
+```
+### modules:import and export
+
+```
+export class customer{
+
+}
+```
+```
+import {customer} from "./customer";
+```
 
 
 
