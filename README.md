@@ -45,3 +45,42 @@ we will get the javascript file and we can run that file: <br>
 node sample-types.js
 
 
+### loops and array:
+
+```
+let reviews: number[] = [5,5,4.5,1,3];
+
+for(let i=0;i<reviews.length;i++){
+ console.log(reviews[i]); 
+}
+```
+
+```
+let sportsOne: string[] = ["Golf","Cricket","Tennis","Swimming"];
+
+for(let i=0;i<sportsOne.length;i++){
+  console.log(sportsOne[i]);
+}
+```
+
+##### simplified for loop
+
+```
+let sportsOne:string[] = ["golf", "Cricket", "Tennis","Swimming"];
+for(let tempSport of sportsOne){
+ console.log(tempSport);
+}
+```
+
+```
+let sportsTwo: string[] = ["golf","cricket","Tennis"];
+sportsTwo.push("BaseBall");
+sportsTwo.push(Futbol);
+for(let i of sportsTwo){
+ console.log(i);
+}
+
+
+
+
+
