@@ -186,10 +186,47 @@ export class customer{
 
 }
 ```
+
+
 ```
 import {customer} from "./customer";
 ```
 
+### concept of type
+```
+type person = {
+ name:string,
+ age:number
+};
+let person:person = {
+  name:"rabin",
+}
 
+//if I don't give age in this person object then compiler will show and error<br>
+but if we want to make something optional then we can make use of "?".
+<br>
 
+so,
+type person ={
+ name:string,
+ age?: number
+};
+//now we can have age as optional.
 
+```
+### union concept:
+
+```
+if you want to have a variable have both string and number to be store then we need to make use of the union concept
+```
+```
+let age: number | string;
+age = 5;
+age = "five";
+```
+```
+const App: React.Fc = ()=>{
+
+}
+
+```
